@@ -4,7 +4,7 @@
   "description": "Node backend server for Levvel candidates",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest"  
   },
   "author": "Cortez, Zulmy",
   "license": "ISC",

@@ -5,7 +5,7 @@ const PostBlog = require('../controller/PostBlog')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.send("Hello World")
+    res.send("Root Page")
 })
 
 router.get("/:universalURL", (req, res) => {
@@ -13,7 +13,7 @@ router.get("/:universalURL", (req, res) => {
 });
 
 router.get('/blog/:id', GetBlogs)
-router.post('/blog/post', PostBlog)
+router.post('/blog/post/', PostBlog)
 
 
 module.exports = router
