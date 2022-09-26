@@ -7,6 +7,7 @@ const router = require('./node_modules/router')
 const app = express()
 const port = 3001
 
+
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(express.json())
@@ -14,5 +15,6 @@ app.use(express.json())
 db.on('error', console.error.bind(console, 'MongoDB connection failed...'))
 
 app.use('/api', router)
+app.use('/', require('./routes/index'))
 
 app.listen(port, () => console.log(`Server running on ${port}`))
