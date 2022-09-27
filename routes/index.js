@@ -17,6 +17,7 @@ router.get("/:universalURL", (req, res) => {
 router.get('/blog/:id', GetBlogs)
 router.get('/blog/post/:id/comment', GetComment)
 
+
 router.post('/blog/post/', PostBlog)
 router.post('/blog/post/:id/comment', PostComment)
 
