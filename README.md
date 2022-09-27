@@ -1,5 +1,9 @@
 ## Levvel Technical Interview
 
+## Getting Started
+
+"C:\Program Files\MongoDB\Server\6.0\bin\mongod.exe" --dbpath="c:\data\db"
+
 ### Project Setup
 
 - Fork the repository and clone the repository to your local machine. Documentation on how to do this https://docs.github.com/en/get-started/quickstart/fork-a-repo
@@ -48,6 +52,7 @@ Below are a few links to documentation that may be helpful:
   - MongoDB compass https://www.digitalocean.com/community/tutorials/how-to-use-mongodb-compass
 
 - Mongoose - https://mongoosejs.com/
+- REST API https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073
 
 ## Submitting Your Work (IMPORTANT)
 
