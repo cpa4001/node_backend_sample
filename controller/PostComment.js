@@ -33,4 +33,4 @@ postComment = (req, res) => {
     })
 }
 
-module.exports = { postComment }
+module.exports = postComment 
