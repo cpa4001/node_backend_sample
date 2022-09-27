@@ -31,6 +31,7 @@ postBlog = (req, res) => {
         message: 'Blog post not created!',
       })
     })
+    console.log(req.body)
 }
 
 module.exports = postBlog 
