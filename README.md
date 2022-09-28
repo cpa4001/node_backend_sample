@@ -2,7 +2,22 @@
 
 ## Getting Started
 
-"C:\Program Files\MongoDB\Server\6.0\bin\mongod.exe" --dbpath="c:\data\db"
+```
+#Clone the repo into a directory of your choice
+C:\> git clone https://github.com/cpa4001/node_backend_sample.git
+
+#create a dir to house your database
+mkdir .\data\db
+
+#Open another command prompt and run the following to start your mongodb instance
+C:\> "C:\Program Files\MongoDB\Server\6.0\bin\mongod.exe" --dbpath="c:\data\db"
+
+# run the  following to run the application
+C:\node_backend_sample> node index.js
+# OR open the folder in VS Code and run
+npm run dev
+
+```
 
 ### Project Setup
 
@@ -53,6 +68,7 @@ Below are a few links to documentation that may be helpful:
 
 - Mongoose - https://mongoosejs.com/
 - REST API https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073
+- Postman https://learning.postman.com/docs/getting-started/introduction/
 
 ## Submitting Your Work (IMPORTANT)
 
