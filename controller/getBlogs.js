@@ -5,7 +5,8 @@ getBlogs = async (req, res) => {
     if (err) {
       return res.status(400).json({ 
         success: false, 
-        error: err})
+        error: err
+      })
     }
     if (!blog.length) {
       return res.status(200).json({ 
@@ -14,7 +15,7 @@ getBlogs = async (req, res) => {
       })
     }
     return res.status(200).json({ success: true, data: blog})
-  })
+  }).catch(err => console.log(err))
 }
 
 module.exports = getBlogs 
