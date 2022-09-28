@@ -3,6 +3,9 @@ const Comment = require('../models/comment')
 postComment = (req, res) => {
   const body = req.body
 
+  // Ensure that postId is the same as route parameter
+  body.postId = Number(req.params.id)
+
   if (!body) {
     return res.status(400).json({
       success: false,
@@ -21,13 +24,13 @@ postComment = (req, res) => {
     .then(() => {
       return res.status(201).json({
         success: true,
-        id: blog._id,
+        data: body,
         message: 'Comment created!',
       })
     })
-    .catch(error => {
+    .catch(err => {
       return res.status(400).json({
-        error,
+        error: err,
         message: 'Comment not created!',
       })
     })

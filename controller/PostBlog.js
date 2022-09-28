@@ -1,5 +1,6 @@
 const Blog = require('../models/blog')
 
+
 postBlog = (req, res) => {
   const body = req.body
 
@@ -8,9 +9,14 @@ postBlog = (req, res) => {
       status: false,
       error: "Blog object must not be empty"
     })
-  }
+  } 
 
   const blog = new Blog(body)
+
+  if (!blog) {
+    return res.status(400).json({ success: false, error: err })
+  }
+
   blog.save().then(() => {
     return res.status(201).json({
       success: true,
