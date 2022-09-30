@@ -4,18 +4,24 @@ const Blog = require('../models/blog')
 postBlog = (req, res) => {
   const body = req.body
 
+  /* unnecessary error handling since empty body does not 
+  make !body true
+  console.log(!body)
+
   if(!body) {
     return res.status(400).json({
       status: false,
-      error: "Blog object must not be empty"
+      error: "Blog body must not be empty"
     })
   } 
-
-  const blog = new Blog(body)
 
   if (!blog) {
     return res.status(400).json({ success: false, error: err })
   }
+ */
+
+  const blog = new Blog(body)
+  
 
   blog.save().then(() => {
     return res.status(201).json({
@@ -26,7 +32,8 @@ postBlog = (req, res) => {
   }).catch(err => {
     return res.status(400).json({
       success: false,
-      error: err
+      error: err,
+      message: "Blog not created."
     })
   })
 }

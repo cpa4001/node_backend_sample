@@ -9,8 +9,8 @@ getBlogs = async (req, res) => {
       })
     }
     if (!blog.length) {
-      return res.status(200).json({ 
-        success: true, 
+      return res.status(404).json({ 
+        success: false, 
         data: "No blogs found with this id"
       })
     }

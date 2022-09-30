@@ -10,8 +10,7 @@ getComment = async (req, res) => {
     }
     if (!comment.length) {
       return res
-        .status(404)
-        .json({ 
+        .status(404).json({ 
           success: false, 
           error: "No comments found with this post id" 
         })
