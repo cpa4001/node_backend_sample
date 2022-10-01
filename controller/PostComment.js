@@ -1,30 +1,12 @@
 const Comment = require('../models/comment')
 
+// Creates a comment for a blog of a given id, with a given body
 postComment = (req, res) => {
+  // Comment can not be instantiated directly with req.body
   const body = req.body
-
-  /*unncecessary error handlers
-  console.log(!body)
-
-  if (!body) {
-    return res.status(400).json({
-      success: false,
-      error: 'Comment body must not be empty',
-    })
-  }
-
   const comment = new Comment(body)
 
-  if (!comment) {
-    return res.status(400).json({ success: false, error: err })
-  }
-  */
-
-  const comment = new Comment(body)
-
-  comment
-    .save()
-    .then(() => {
+  comment.save().then(() => {
       return res.status(201).json({
         success: true,
         data: body,

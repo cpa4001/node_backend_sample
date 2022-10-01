@@ -1,28 +1,11 @@
 const Blog = require('../models/blog')
 
-
+// Creates a blog with a given body
 postBlog = (req, res) => {
+  // Blog can not be instantiated directly with req.body
   const body = req.body
-
-  /* unnecessary error handling since empty body does not 
-  make !body true
-  console.log(!body)
-
-  if(!body) {
-    return res.status(400).json({
-      status: false,
-      error: "Blog body must not be empty"
-    })
-  } 
-
-  if (!blog) {
-    return res.status(400).json({ success: false, error: err })
-  }
- */
-
   const blog = new Blog(body)
   
-
   blog.save().then(() => {
     return res.status(201).json({
       success: true,

@@ -15,6 +15,8 @@ app.use(express.json())
 db.on('error', console.error.bind(console, 'MongoDB connection failed...'))
 
 app.use('/api', router)
+
+// Set routing from root directory to use router in routes/index.js
 app.use('/', require('./routes/index'))
 
 app.listen(port, () => console.log(`Server running on ${port}`))

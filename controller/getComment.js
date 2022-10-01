@@ -1,5 +1,6 @@
 const Comment = require('../models/comment')
 
+// Gets comment(s) for a blog given a postId
 getComment = async (req, res) => {
   await Comment.find({postId: req.params.id}, (err, comment) => {
     if (err) {
@@ -9,8 +10,7 @@ getComment = async (req, res) => {
       })
     }
     if (!comment.length) {
-      return res
-        .status(404).json({ 
+      return res.status(404).json({ 
           success: false, 
           error: "No comments found with this post id" 
         })
@@ -18,6 +18,5 @@ getComment = async (req, res) => {
     return res.status(200).json({ success: true, data: comment })
   }).catch(err => console.log(err))
 }
-
 
 module.exports = getComment 

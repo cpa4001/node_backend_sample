@@ -1,5 +1,6 @@
 const Blog = require('../models/blog')
 
+// Gets a blog with a given id
 getBlogs = async (req, res) => {
   await Blog.find({id: req.params.id}, (err, blog) => {
     if (err) {
