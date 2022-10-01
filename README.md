@@ -1,30 +1,12 @@
-## Levvel Technical Interview
-
-## Getting Started
-
-```
-#Clone the repo into a directory of your choice
-C:\> git clone https://github.com/cpa4001/node_backend_sample.git
-
-#create a dir to house your database
-mkdir .\data\db
-
-#Open another command prompt and run the following to start your mongodb instance
-C:\> "C:\Program Files\MongoDB\Server\6.0\bin\mongod.exe" --dbpath="c:\data\db"
-
-# run the  following to run the application
-C:\node_backend_sample> node index.js
-# OR open the folder in VS Code and run
-npm run dev
-
-```
+## Endava Technical Interview
 
 ### Project Setup
 
-- Fork the repository and clone the repository to your local machine. Documentation on how to do this https://docs.github.com/en/get-started/quickstart/fork-a-repo
-- open the project locally
-- Create a branch using the naming convention **yourFirstName_yourLastName**. This is where you work should be saved.
+- Fork the repository and clone it to your local machine. For documentation on how to do this, please visit: https://docs.github.com/en/get-started/quickstart/fork-a-repo
+- Open the project locally
+- Create a new branch in the newly forked repo using the naming convention **yourFirstName_yourLastName**. This is where your work should be saved.
 - The application will start on http://localhost:3001
+- To better understand the workflow process, view [this video](https://www.youtube.com/watch?v=1jAtPrOrRPs) on how to fork a repository, and open a pull request to merge branches within a forked repository
 
 ## Existing State
 
@@ -49,29 +31,20 @@ You should add two new endpoints.
 
 Feel free to modify existing files or create new files. You may add new dependencies if you choose. Please follow the conventions in place throughout the project.
 
-### Please spend no more than 4 hours on this task
-
 ## Resources
 
 You may use any internet sources to aid your implementation.
 
 Below are a few links to documentation that may be helpful:
 
-- ExpressJS - https://expressjs.com/
+ExpressJS - https://expressjs.com/
 
-  - Routing: https://expressjs.com/en/guide/routing.html
-  - Using ExpressJS router: https://www.a2hosting.com/kb/cpanel/cpanel-software/node-js-application-error-message-cannot-get-url
+Mongo - https://docs.mongodb.com/guides/server/install/ : https://docs.mongodb.com/guides/
 
-- Mongo - https://docs.mongodb.com/guides/server/install/ : https://docs.mongodb.com/guides/
-
-  - MongoDB compass https://www.digitalocean.com/community/tutorials/how-to-use-mongodb-compass
-
-- Mongoose - https://mongoosejs.com/
-- REST API https://codeburst.io/hitchhikers-guide-to-back-end-development-with-examples-3f97c70e0073
-- Postman https://learning.postman.com/docs/getting-started/introduction/
+Mongoose - https://mongoosejs.com/
 
 ## Submitting Your Work (IMPORTANT)
 
 When you are finished, create a Pull Request in Github for the forked repository. This Pull Request should compare your created branch to the **main** branch. Email the link to your Pull Request to nicole.niemczycki@endava.com at least 24 hours prior to your technical interview
 
-Please make sure your Pull Request is for your forked repo, NOT the original repo
+Again, please make sure your Pull Request is comparing the new branch you created on your forked repo to the _main_ branch on your forked repo. The initial repository you forked off of should NOT be referenced.
