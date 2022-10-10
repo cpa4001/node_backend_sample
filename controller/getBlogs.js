@@ -2,7 +2,16 @@ const Blog = require('../models/blog')
 
 // Gets a blog with a given id
 getBlogs = async (req, res) => {
-  await Blog.find({id: req.params.id}, (err, blog) => {
+  const  id_ = req.params.id
+
+  if (!Number(id_)) {
+    return res.status(500).json({
+      success: false,
+      error: "Invalid ID" 
+    })
+  }
+  
+  await Blog.find({ id: id_ } , (err, blog) => {
     if (err) {
       return res.status(400).json({ 
         success: false, 

@@ -8,7 +8,7 @@ const Comment = new Schema({
   postId: { type: Number, required: true},
   id: { type: Number, required: true },
   name: { type: String, required: true },
-  body: String
+  body: { type: String, required: true }
 })
 
 module.exports = mongoose.model('comment', Comment)

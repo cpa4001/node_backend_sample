@@ -2,8 +2,15 @@ const Blog = require('../models/blog')
 
 // Creates a blog with a given body
 postBlog = (req, res) => {
-  // Blog can not be instantiated directly with req.body
   const body = req.body
+
+  if (!body) {
+    return res.status(400).json({
+      success: false,
+      error: "You must provide a blog"
+    })
+  }
+
   const blog = new Blog(body)
   
   blog.save().then(() => {
@@ -15,7 +22,7 @@ postBlog = (req, res) => {
   }).catch(err => {
     return res.status(400).json({
       success: false,
-      error: err,
+      err,
       message: "Blog not created."
     })
   })

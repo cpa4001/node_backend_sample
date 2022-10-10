@@ -2,8 +2,15 @@ const Comment = require('../models/comment')
 
 // Creates a comment for a blog of a given id, with a given body
 postComment = (req, res) => {
-  // Comment can not be instantiated directly with req.body
   const body = req.body
+
+  if (!body) {
+    return res.status(400).json({
+      success: false,
+      error: "You must provide a comment"
+    })
+  }
+ 
   const comment = new Comment(body)
 
   comment.save().then(() => {
@@ -15,7 +22,7 @@ postComment = (req, res) => {
     })
     .catch(err => {
       return res.status(400).json({
-        error: err,
+        err,
         message: 'Comment not created!',
       })
     })
